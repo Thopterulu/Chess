@@ -2,6 +2,7 @@
 
 from PyQt5.QtWidgets import QApplication, QMainWindow
 import sys
+from src.board import board
 
 class Window(QMainWindow):
    def __init__(self):
@@ -11,6 +12,7 @@ class Window(QMainWindow):
        self.setWindowTitle("Chess")
        self.show()
        self.activateWindow()
+       self.setCentralWidget(board())
 
 app = QApplication(sys.argv)
 window = Window()
